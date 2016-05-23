@@ -5,6 +5,11 @@
 # is restricted to this project.
 use Mix.Config
 
+#Configure Passport for user authentication
+config :passport,
+  resource: #{binding[:module]},
+  repo: #{binding[:base]}.Repo
+
 # Configures the endpoint
 config :my_app, MyApp.Endpoint,
   url: [host: "localhost"],
